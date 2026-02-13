@@ -1,0 +1,22 @@
+{
+  "name": "projet-marilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aziz-aitbihi22/PROJET-MARILLA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aziz-aitbihi22/PROJET-MARILLA/issues"
+  },
+  "homepage": "https://github.com/aziz-aitbihi22/PROJET-MARILLA#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
