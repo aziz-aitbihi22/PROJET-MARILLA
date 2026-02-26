@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Vérifier si l'utilisateur est connecté (Token valide)
 exports.protect = async (req, res, next) => {
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
@@ -17,7 +16,6 @@ exports.protect = async (req, res, next) => {
     if (!token) res.status(401).json({ message: 'Not authorized, no token' });
 };
 
-// Vérifier si l'utilisateur est ADMIN
 exports.admin = (req, res, next) => {
     if (req.user && req.user.role === 'ADMIN') {
         next();
