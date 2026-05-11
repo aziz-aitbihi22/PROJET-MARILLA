@@ -1,0 +1,130 @@
+/* ═══════════════════════════════════════════════════
+   Navbar Minimalist Styles
+   ═══════════════════════════════════════════════════ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1.5rem 2.5rem;
+  transition: all var(--transition-base);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.glass-effect {
+  padding: 1rem 2.5rem;
+  border-bottom-color: var(--color-stone-100);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  color: var(--color-stone-900);
+}
+
+.logo-subtext {
+  font-size: 7px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  color: var(--color-stone-400);
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar-link {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--color-stone-400);
+  transition: color var(--transition-fast);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-link:hover {
+  color: var(--color-stone-900);
+}
+
+.navbar-link.active {
+  color: var(--color-stone-900);
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-stone-900);
+}
+
+/* Auth Section */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-welcome {
+  text-align: right;
+  border-right: 1px solid var(--color-stone-200);
+  padding-right: 2rem;
+}
+
+.welcome-text {
+  display: block;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-stone-300);
+  margin-bottom: 2px;
+}
+
+.user-name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-stone-800);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,145 @@
+/* ═══════════════════════════════════════════════════
+   Rooms Page Layout
+   ═══════════════════════════════════════════════════ */
+
+/* Cinematic Hero */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 25, 23, 0.3); /* bg-stone-900/30 */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: var(--color-white);
+  padding: 0 1.5rem;
+}
+
+.hero-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.8;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+/* Discovery Section */
+.discovery-section {
+  padding: 8rem 2.5rem;
+  max-width: 80rem; /* 1280px */
+  margin: 0 auto;
+}
+
+.discovery-header {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .discovery-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.discovery-header .label-micro {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.discovery-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-stone-900);
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rooms-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Skeleton */
+.room-skeleton {
+  aspect-ratio: 4/5;
+  background: var(--color-stone-100);
+  border-radius: var(--radius-xl);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+/* Empty State */
+.empty-state-lux {
+  text-align: center;
+  padding: 8rem 0;
+  border: 2px dashed var(--color-stone-100);
+  border-radius: var(--radius-lg);
+}
+
+.empty-state-text {
+  color: var(--color-stone-300);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+}
